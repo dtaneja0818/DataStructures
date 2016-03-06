@@ -132,7 +132,7 @@ public class LinkListOperations{
 		}
 	}
 	
-	//http://geeksquiz.com/linked-list-set-3-deleting-node/
+	//http://geeksquiz.com/linked-list-set-3-deleting-node
 	public static LinkListNode deleteKey(int data){
 		LinkListNode ptr = head;
 		// no node present
@@ -166,7 +166,7 @@ public class LinkListOperations{
 			System.out.print(ptr.data+"->");
 			ptr = ptr.next;
 		}
-		System.out.println("");
+		System.out.println();
 	}
 
 	public static void printLinkListUsingRecursion(LinkListNode ptr){
