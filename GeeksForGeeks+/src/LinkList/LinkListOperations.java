@@ -166,7 +166,7 @@ public class LinkListOperations{
 			System.out.print(ptr.data+"->");
 			ptr = ptr.next;
 		}
-		System.out.println();
+		System.out.println("");
 	}
 
 	public static void printLinkListUsingRecursion(LinkListNode ptr){
