@@ -166,15 +166,27 @@ public class LinkListOperations{
 			System.out.print(ptr.data+"->");
 			ptr = ptr.next;
 		}
-		System.out.println("");
+		System.out.println();
 	}
 
-	public static void printLinkListUsingRecursion(LinkListNode ptr){
+	public static void printLinkListUsingRecursion(LinkListNode head){
 		LinkListNode ptr = head;
+		
 	}
 	
 	public static LinkListNode reverseLinkList(LinkListNode currentPtr){
 		LinkListNode ptr = head;
+		
+	}
+	
+	public static int getLinkListLength(LinkListNode head){
+		LinkListNode ptr = head;
+		
+	}
+	
+	public static int getLinkListLengthUsingRecursion(LinkListNode head){
+		LinkListNode ptr = head;
+		
 	}
 	
 	public static LinkListNode createCLL(){
