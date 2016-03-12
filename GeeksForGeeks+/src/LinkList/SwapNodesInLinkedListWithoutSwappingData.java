@@ -3,19 +3,43 @@ package LinkList;
 public class SwapNodesInLinkedListWithoutSwappingData {
 
 	public LinkListNode swapNodes(LinkListNode head, int x, int y){
-		if(head == null || head.next == null){
-			return;
-		}
-		LinkListNode ptr1 =  head;
-		LinkListNode ptr2 = head;
+
+		LinkListNode currX =  head;
+		LinkListNode prevX = null;
 		
-		while(ptr1.next != null && ptr1.next.data != x){
-			ptr1 = ptr1.next;
+		LinkListNode currY =  head;
+		LinkListNode prevY = null;
+		
+		while(currX != null && currX.data != x){
+			prevX = currX;
+			currX = currX.next;
 		}
-		while(ptr2.next != null && ptr2.next.data != y) {
-			ptr2 = ptr2.next;
+		while(currY != null && currY.data != y) {
+			prevY = currY;
+			currY = currY.next;
 		}
-		 
+		
+		// If either x or y is not present, nothing to do
+        if (currX == null || currY == null)
+            return head;
+ 
+        // If x is not head of linked list
+        if (prevX != null)
+            prevX.next = currY;
+        else //make y the new head
+            head = currY;
+ 
+        // If y is not head of linked list
+        if (prevY != null)
+            prevY.next = currX;
+        else // make x the new head
+            head = currX;
+ 
+        // Swap next pointers
+        LinkListNode ptr = currX.next;
+        currX.next = currY.next;
+        currY.next = ptr;
+		return head;
 	}
 	
 	public static void main(String[] args) {
@@ -24,7 +48,7 @@ public class SwapNodesInLinkedListWithoutSwappingData {
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
 		ll.printLinkList(head);
-		head = obj.swap(head,3, 4);
+		head = obj.swapNodes(head,3, 4);
 		ll.printLinkList(head);
 	}
 
