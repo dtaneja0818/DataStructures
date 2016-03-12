@@ -181,12 +181,44 @@ public class LinkListOperations{
 	
 	public static int getLinkListLength(LinkListNode head){
 		LinkListNode ptr = head;
+		int lLength = 0;
+				
+		while(ptr != null){
+			lLength++;
+			ptr = ptr.next;
+		}
+		return lLength;
 		
 	}
 	
 	public static int getLinkListLengthUsingRecursion(LinkListNode head){
+		if(head == null){
+			return 0;
+		}
+		return 1+getLinkListLengthUsingRecursion(head.next);
+	}
+	
+	public static boolean find(LinkListNode head, int key){
 		LinkListNode ptr = head;
 		
+		while(ptr != null){
+			if(ptr.data == key){
+				return true;
+			}
+			ptr=ptr.next;
+		}
+		return false;
+	}
+	
+	public static boolean findUsingRecursion(LinkListNode head, int key){
+		if(head == null){
+			return false;
+		}
+		if(head.data == key){
+			return true;
+		}
+		
+		return findUsingRecursion(head.next, key);
 	}
 	
 	public static LinkListNode createCLL(){
