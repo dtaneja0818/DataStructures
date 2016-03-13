@@ -6,21 +6,30 @@ public class LinkListOperations{
 	public static void main(String[] args){
 		LinkListNode head = null;
 		head = addNodeAtBegining(head,4);
+		System.out.println("List after adding 4 at beginning");
 		printLinkList(head);
 		head = addNodeAtBegining(head,3);
+		System.out.println("List after adding 3 at beginning");
 		printLinkList(head);
 		head = addNodeAtBegining(head,2);
+		System.out.println("List after adding 2 at beginning");
 		printLinkList(head);
 		head = addNodeAtBegining(head,1);
+		System.out.println("List after adding 1 at beginning");
 		printLinkList(head);
 		head = addNodeAtEnd(head,5);
+		System.out.println("List after adding 5 at end");
 		printLinkList(head);
 		head = addNodeAtEnd(head,6);
+		System.out.println("List after adding 6 at end");
 		printLinkList(head);
 		head = addNodeAtNthPosition(head,7,7);
+		System.out.println("List after adding 7 at 7th position");
 		printLinkList(head);
 		head = deleteNodeAtNthPosition(head,7);
+		System.out.println("List after deleting node at 7th position");
 		printLinkList(head);
+		System.out.println(getNthNode(head, 3));
 	}
 	
 	public static LinkListNode createLinkList(){
@@ -192,11 +201,11 @@ public class LinkListOperations{
 		return 1+getLinkListLengthUsingRecursion(head.next);
 	}
 	
-	public static boolean find(LinkListNode head, int key){
+	public static boolean findData(LinkListNode head, int data){
 		LinkListNode ptr = head;
 		
 		while(ptr != null){
-			if(ptr.data == key){
+			if(ptr.data == data){
 				return true;
 			}
 			ptr=ptr.next;
@@ -204,15 +213,55 @@ public class LinkListOperations{
 		return false;
 	}
 	
-	public static boolean findUsingRecursion(LinkListNode head, int key){
+	public static boolean findDataUsingRecursion(LinkListNode head, int data){
 		if(head == null){
 			return false;
 		}
-		if(head.data == key){
+		if(head.data == data){
 			return true;
-		}
+		}		
+		return findDataUsingRecursion(head.next, data);
+	}
+	
+	//http://www.geeksforgeeks.org/write-a-function-to-get-nth-node-in-a-linked-list/
+	public static int getNthNode(LinkListNode head, int idx){
+
+		LinkListNode ptr = head;
+		int nodeCount = 1;
+		while(ptr != null){
+			if(idx == nodeCount){
+				return ptr.data;
+			}
+			nodeCount++;
+			ptr = ptr.next;
+		}		
+		throw new Error("List Empty/Node not found");
+	}
+	
+	//http://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+	//Time Complexity: O(n) where n is the length of linked list.
+	public static int getNthNodeFromLast(LinkListNode head, int idx){
+
+		LinkListNode slow = head;
+		LinkListNode fast = head;
 		
-		return findUsingRecursion(head.next, key);
+		int nodeCount = 0;
+		if(head != null){
+			while(nodeCount < idx){
+				if(fast == null){
+					throw new Error("index in greater then count of node");
+				}
+				nodeCount++;
+				fast = fast.next;
+			}
+	
+			while(fast != null){
+			 	fast = fast.next;
+				slow = slow.next;			
+			}
+			return slow.data;	
+		}
+		throw new Error("Not found");
 	}
 	
 	public static LinkListNode createCLL(){
