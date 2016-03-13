@@ -1,0 +1,24 @@
+what is difference between declaring List l = new ArrayList() and ArrayList al = new ArrayList()?
+
+List is an Interface (Super type of ArrayList, LinkedList). when you sat List l = new ArrayList(); you are creating a subclass object with super class 
+reference, thus you can access the methods of only super class but in case of overridden methods the subclasses method would be invoked.
+
+In your case:
+
+List l = new ArrayList()
+you will only be able to invoke methods and fields declared inside list interface.
+
+ArrayList al = new ArrayList()
+you will be able to invoke methods and fields from both the list and the arraylist.
+
+also when you create an arraylist using approach 1
+
+List l = new ArrayList();
+later you can use the same reference to create a LinkedList like
+
+l = new LinkedList(); which you cant using approach 2: ArrayList al = new ArrayList()
+
+al = new LinkedList()// cannot do this
+
+Using List list = new ArrayList() is more OOP style since you declare that you don't care about the specific implementation of the list, and that you want 
+to discard the static information about the type since you will rely on the interface provided by this kind of collection abstracting from its implementation.

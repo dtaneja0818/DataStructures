@@ -1,0 +1,26 @@
+I Want This Job Because...
+It will enable me to utilise and employ my skills, knowledge and aptitude. 
+I can make contributions to the establishment and at the same time build upon my existing skills and experience by working in this role.
+
+why u?
+
+My education and life experience have prepared me to take on the challenges of this position.
+My previous job working as Systems Engineer provided me with the ideal experience for this position and my skill set is a perfect match for the job requirements.
+I have the ability to find my niche within a group and support everyone's efforts.
+
+Why are you interested in software engineering?
+
+Because I'm looking for intellectual stimulation and being able to build something concrete with my bare hands...something tangeable.  
+I want to be able to come home some days and say "I built something fun and useful today".
+
+Seeking a challenging opportunity to use my skills with a long term perspective to add value and grow in an organization. 
+I aspire to contribute broadly by participating in product design, development and delivering strategic applications.
+
+Tell us about the last project you built that you are most proud of and why? Please provide a link.
+
+Below is the project description of my most recent project which involved rigorous coding and testing, 
+It was a challenge for me to work on the latest javascript framework and No-Sql database engine(MongoDB).
+Project: WebApp Development using Meteor framework (Technologies: JavaScript, CSS, HTML, MongoDB, Meteor)
+-Designed and developed a web application for enterprise-wide Innovation centre mapping using meteor framework.
+-Improved user experience by boosting the efficiency of application, eliminating bugs and scaling back end systems to meet growing traffic requirements.
+
