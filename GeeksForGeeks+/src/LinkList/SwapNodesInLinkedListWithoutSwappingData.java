@@ -52,5 +52,4 @@ public class SwapNodesInLinkedListWithoutSwappingData {
 			head = obj.swapNodes(head,3, 4);
 			ll.printLinkList(head);
 	}
-
 }
