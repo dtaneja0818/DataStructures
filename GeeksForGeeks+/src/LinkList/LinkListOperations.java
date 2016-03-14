@@ -157,12 +157,6 @@ public class LinkListOperations{
 		throw new Error("Node not found");
 	}
 	
-	public static LinkListNode mergeLL(LinkListNode a, LinkListNode b){
-		LinkListNode ptr1 = a;
-		LinkListNode ptr2 = b;
-		return a;
-	}
-	
 	public static void printLinkList(LinkListNode head){
 		LinkListNode ptr = head;
 		if(head == null) System.out.println("List is empty");
@@ -264,13 +258,37 @@ public class LinkListOperations{
 		throw new Error("Not found");
 	}
 	
+	public static LinkListNode mergeLL(LinkListNode a, LinkListNode b){
+		LinkListNode ptr = a;
+		if(a == null && b == null) return null;
+		else if(a == null) return b;
+		else if(b == null) return a;
+		else{
+			while(ptr.next != null){
+				ptr = ptr.next;
+			}
+			ptr.next = b;
+		}
+		return a;
+	}
+	
 	public static LinkListNode createCLL(){
-		LinkListNode head = null;
+		LinkListNode head = createLinkList();
+		LinkListNode ptr = head;
+		while(ptr.next != null){
+			ptr = ptr.next;
+		}
+		ptr.next = head.next.next;
 		return head;
 	}
 	
 	public static LinkListNode createFullCLL(){
-		LinkListNode head =  null;
+		LinkListNode head = createLinkList();
+		LinkListNode ptr = head;
+		while(ptr.next != null){
+			ptr = ptr.next;
+		}
+		ptr.next = head;
 		return head;
 	}
 	

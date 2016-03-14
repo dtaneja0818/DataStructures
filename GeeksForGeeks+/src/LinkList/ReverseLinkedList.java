@@ -3,10 +3,11 @@ package LinkList;
 
 public class ReverseLinkedList {
 
+	//Time Complexity: O(n), Space Complexity: O(1)
 	public LinkListNode reverseLL(LinkListNode head){
 		LinkListNode prev = null;
 		LinkListNode curr = head;
-		LinkListNode next = curr.next;
+		LinkListNode next = null;
 		while(curr != null){
 			next = curr.next;
 			curr.next = prev;
@@ -17,8 +18,38 @@ public class ReverseLinkedList {
 		return head;
 	}
 	
+	/* 1) Divide the list in two parts - first node and rest of the linked list.
+	   2) Call reverse for the rest of the linked list.
+	   3) Link rest to first.
+	   4) Fix head pointer
+	*/
+	// not working as expected
 	public void reverseLLUsingRecursion(LinkListNode head){
-		
+
+		LinkListNode first;
+		LinkListNode rest;
+	      
+	    /* empty list */
+	    if (head == null)
+	       return;   
+	 
+	    /* suppose first = {1, 2, 3}, rest = {2, 3} */
+	    first = head;  
+	    rest  = first.next;
+	 
+	    /* List has only one node */
+	    if (rest == null)
+	       return;   
+	 
+	    /* reverse the rest list and put the first element at the end */
+	    reverseLLUsingRecursion(rest);
+	    first.next.next  = first;  
+	     
+	    /* tricky step -- see the diagram */
+	    first.next  = null;          
+	 
+	    /* fix the head pointer */
+	    head = rest;
 	}
 	
 	public static void main(String[] args) {
