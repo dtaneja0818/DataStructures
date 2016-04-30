@@ -30,6 +30,8 @@ public class LinkListOperations{
 		System.out.println("List after deleting node at 7th position");
 		printLinkList(head);
 		System.out.println(getNthNode(head, 3));
+		System.out.println("print Reverse LinkList Using Recursion: ");
+		printReverseLinkListUsingRecursion(head);
 	}
 	
 	public static LinkListNode createLinkList(){
@@ -172,9 +174,20 @@ public class LinkListOperations{
 		
 	}
 	
-	public static LinkListNode reverseLinkList(LinkListNode head){
+	public static void printReverseLinkList(LinkListNode head){
 		LinkListNode ptr = head;
-		return head;
+		
+	}
+	
+	//http://www.geeksforgeeks.org/write-a-recursive-function-to-print-reverse-of-a-linked-list/
+	//Time Complexity: O(n)
+	public static void printReverseLinkListUsingRecursion(LinkListNode head){
+		if(head == null){
+			return;
+		}
+		
+		printReverseLinkListUsingRecursion(head.next);
+		System.out.print(head.data+"->");
 	}
 	
 	public static int getLinkListLength(LinkListNode head){
