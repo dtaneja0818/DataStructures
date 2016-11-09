@@ -3,9 +3,9 @@ package LinkList;
 
 public class InsertInSortedLinkList {
 
-	public LinkListNode insert(LinkListNode head, int data){
-		LinkListNode ptr = null;
-		LinkListNode new_node = new LinkListNode(data);
+	public ListNode insert(ListNode head, int data){
+		ListNode ptr = null;
+		ListNode new_node = new ListNode(data);
 		 
         /* Special case for head node */
         if (head == null || head.data >= new_node.data){
@@ -29,7 +29,7 @@ public class InsertInSortedLinkList {
 	
 	public static void main(String[] args) {
 		InsertInSortedLinkList obj = new InsertInSortedLinkList();
-		LinkListNode head = null;
+		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
 		ll.printLinkList(head);

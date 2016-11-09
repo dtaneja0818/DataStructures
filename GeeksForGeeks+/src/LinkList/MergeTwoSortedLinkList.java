@@ -1,34 +1,40 @@
 package LinkList;
 
+/*
+ * http://www.geeksforgeeks.org/merge-two-sorted-linked-lists/
+ */
+ 
 public class MergeTwoSortedLinkList {
 
-	public LinkListNode merge(LinkListNode head1, LinkListNode head2) {
-		LinkListNode result = null;
-		if(head1 == null && head2 == null){
-			return null;
-		}else if(head1 == null){
-			return head2;
-		}else if(head2 == null){
-			return head1;
-		}else{
-			while(head1 != null && head2 != null){
-				if(head1.data == head2.data){
-					result = LinkListOperations.addNodeAtEnd(result,head1.data);
-					head1 = head1.next;
-					head2 = head2.next;
-				}else if(head1.data < head2.data){
-					result = LinkListOperations.addNodeAtEnd(result,head1.data);
-					head1 = head1.next;
+	public ListNode merge(ListNode a, ListNode b){
+		ListNode result = null;
+		if(a == null && b == null) return null;
+		else if(a == null) return b;
+		else if(b == null) return a;
+		else{
+			while(a != null && b != null){
+				if(a.data == b.data){
+					result = LinkListOperations.addNodeAtEnd(result,a.data);
+					a = a.next;
+					b = b.next;
+				}else if(a.data < b.data){
+					result = LinkListOperations.addNodeAtEnd(result,a.data);
+					a = a.next;
 				}else{
-					 result = LinkListOperations.addNodeAtEnd(result,head2.data);
-					 head2 = head2.next;
+					result = LinkListOperations.addNodeAtEnd(result,b.data);
+					b = b.next;
 				}
-				
 			}
-			if(head1 != null){
-				LinkListOperations.mergeLL(result, head1);
-			}else if(head2 != null){
-				LinkListOperations.mergeLL(result, head2);
+			if(a != null){
+				while(a != null){
+					result = LinkListOperations.addNodeAtEnd(result,a.data);
+					a = a.next;
+				}
+			}else if(b != null){
+				while(b != null){
+					result = LinkListOperations.addNodeAtEnd(result,b.data);
+					b = b.next;
+				}
 			}
 		}
 		return result;
@@ -36,9 +42,9 @@ public class MergeTwoSortedLinkList {
 	
 	public static void main(String[] args) {
 		MergeTwoSortedLinkList obj = new MergeTwoSortedLinkList();
-		LinkListNode head1 = null;
-		LinkListNode head2 = null;
-		LinkListNode head = null;
+		ListNode head1 = null;
+		ListNode head2 = null;
+		ListNode head = null;
         LinkListOperations ll = new LinkListOperations();
         head1 = ll.createLinkList();
         ll.printLinkList(head1);

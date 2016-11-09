@@ -3,13 +3,13 @@ package LinkList;
 
 public class SwapNodesInLinkedListWithoutSwappingData {
 
-	public LinkListNode swapNodes(LinkListNode head, int x, int y){
+	public ListNode swapNodes(ListNode head, int x, int y){
 
-			LinkListNode currX =  head;
-			LinkListNode prevX = null;
+			ListNode currX =  head;
+			ListNode prevX = null;
 			
-			LinkListNode currY =  head;
-			LinkListNode prevY = null;
+			ListNode currY =  head;
+			ListNode prevY = null;
 			
 			while(currX != null && currX.data != x){
 				prevX = currX;
@@ -37,7 +37,7 @@ public class SwapNodesInLinkedListWithoutSwappingData {
 	            head = currX;
 	 
 	        // Swap next pointers
-	        LinkListNode ptr = currX.next;
+	        ListNode ptr = currX.next;
 	        currX.next = currY.next;
 	        currY.next = ptr;
 			return head;
@@ -45,7 +45,7 @@ public class SwapNodesInLinkedListWithoutSwappingData {
 	
 	public static void main(String[] args) {
 			SwapNodesInLinkedListWithoutSwappingData obj = new SwapNodesInLinkedListWithoutSwappingData();
-			LinkListNode head = null;
+			ListNode head = null;
 			LinkListOperations ll = new LinkListOperations();
 			head = ll.createLinkList();
 			ll.printLinkList(head);

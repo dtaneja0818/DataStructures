@@ -29,9 +29,9 @@ import java.util.Set;
 public class IntersectionPointOfTwoLinkedLists {
 
 	//Time Complexity: O(m+n), Auxiliary Space: O(1)
-	public LinkListNode getIntersectionNode(LinkListNode headA, LinkListNode headB){
-		LinkListNode ptr1 = headA;
-		LinkListNode ptr2 = headB;
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB){
+		ListNode ptr1 = headA;
+		ListNode ptr2 = headB;
 		
 		int len1 = 0;
 		int len2 = 0;
@@ -74,10 +74,10 @@ public class IntersectionPointOfTwoLinkedLists {
 	
 	//finds the intersection of the given linked lists version2
     //Using memory in brute force Overall Complexity -> O(m log n + n log n)
-    public LinkListNode mergePointApproach2(LinkListNode A, LinkListNode B){
-    	LinkListNode ptr1 = A;
-    	LinkListNode ptr2 = B;
-        Set<LinkListNode> set = new HashSet<LinkListNode>();
+    public ListNode mergePointApproach2(ListNode A, ListNode B){
+    	ListNode ptr1 = A;
+    	ListNode ptr2 = B;
+        Set<ListNode> set = new HashSet<ListNode>();
         while(ptr2 != null){    //O(n log n)
             set.add(ptr2);  //O(log n)
             ptr2 = ptr2.next;
@@ -92,10 +92,10 @@ public class IntersectionPointOfTwoLinkedLists {
         // Code to test the logic, creating 7 nodes and linking them together as
         // two linked list merging at a point.
 		IntersectionPointOfTwoLinkedLists mergePoint = new IntersectionPointOfTwoLinkedLists();
-        LinkListNode head1 = null, head2 = null;
-        LinkListNode temp[] = new LinkListNode[7];
+        ListNode head1 = null, head2 = null;
+        ListNode temp[] = new ListNode[7];
         for(int i=0;i<7;i++) {
-            temp[i] = new LinkListNode(0);;
+            temp[i] = new ListNode(0);;
         }
         // 4->6->7->1->null
 		// 9->3->5->7
@@ -116,7 +116,7 @@ public class IntersectionPointOfTwoLinkedLists {
  
         head1 = temp[0];
         head2 = temp[4];
-        LinkListNode result = mergePoint.mergePointApproach2(head1,head2);
+        ListNode result = mergePoint.mergePointApproach2(head1,head2);
         if(result != null)System.out.println("merge point with approach 1 is at:"+result.data);
         result = mergePoint.getIntersectionNode(head1,head2);
         if(result != null)System.out.println("merge point with approach 2 is at:"+result.data);

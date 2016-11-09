@@ -7,28 +7,28 @@ package LinkList;
 
 public class CheckIfLinkListIsPalindrome {
 
-	public boolean isPalindrome(LinkListNode head){
+	public boolean isPalindrome(ListNode head){
 		if(head == null || head.next==null)
 	        return true;
 	 
 	    //find list center
-	    LinkListNode fast = head;
-	    LinkListNode slow = head;
+	    ListNode fast = head;
+	    ListNode slow = head;
 	 
 	    while(fast.next!=null && fast.next.next!=null){
 	        fast = fast.next.next;
 	        slow = slow.next;
 	    }
 	 
-	    LinkListNode secondHead = slow.next;
+	    ListNode secondHead = slow.next;
 	    slow.next = null;
 	 
 	    //reverse second part of the list
-	    LinkListNode p1 = secondHead;
-	    LinkListNode p2 = p1.next;
+	    ListNode p1 = secondHead;
+	    ListNode p2 = p1.next;
 	 
 	    while(p1!=null && p2!=null){
-	        LinkListNode temp = p2.next;
+	        ListNode temp = p2.next;
 	        p2.next = p1;
 	        p1 = p2;
 	        p2 = temp;
@@ -37,8 +37,8 @@ public class CheckIfLinkListIsPalindrome {
 	    secondHead.next = null;
 	 
 	    //compare two sublists now
-	    LinkListNode p = (p2==null?p1:p2);
-	    LinkListNode q = head;
+	    ListNode p = (p2==null?p1:p2);
+	    ListNode q = head;
 	    while(p!=null){
 	        if(p.data != q.data)
 	            return false;
@@ -51,7 +51,7 @@ public class CheckIfLinkListIsPalindrome {
 	
 	public static void main(String[] args) {
 		CheckIfLinkListIsPalindrome obj = new CheckIfLinkListIsPalindrome();
-		LinkListNode head = null;
+		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
 		ll.printLinkList(head);

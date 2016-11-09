@@ -6,12 +6,12 @@ import java.util.Hashtable;
 public class RemoveDuplicatesFromSortedAndUnsortedLinkeList {
 
 	//Time Complexity: O(n) where n is number of nodes in the given linked list
-	public LinkListNode removeDuplicatesFromSortedLL(LinkListNode head){
+	public ListNode removeDuplicatesFromSortedLL(ListNode head){
 		if(head == null){
 			return null;
 		}
-		LinkListNode current = head;
-		LinkListNode temp = null;
+		ListNode current = head;
+		ListNode temp = null;
 		
 		while(current.next != null){
 			if(current.data == current.next.data){
@@ -26,12 +26,12 @@ public class RemoveDuplicatesFromSortedAndUnsortedLinkeList {
 	}
 	
 	//Time Complexity: O(n) on average (assuming that hash table access time is O(1) on average).
-	public LinkListNode removeDuplicatesFromUnSortedLL(LinkListNode head){
+	public ListNode removeDuplicatesFromUnSortedLL(ListNode head){
 		if(head == null){
 			return null;
 		}
-		LinkListNode current = head;
-		LinkListNode temp = null;
+		ListNode current = head;
+		ListNode temp = null;
 		Hashtable<Integer,Boolean> hash = new Hashtable<Integer,Boolean>();
 		while(current.next != null){
 			if(hash.containsKey(current.next.data)|| current.data == current.next.data){
@@ -48,7 +48,7 @@ public class RemoveDuplicatesFromSortedAndUnsortedLinkeList {
 		
 	public static void main(String[] args) {
 		RemoveDuplicatesFromSortedAndUnsortedLinkeList obj = new RemoveDuplicatesFromSortedAndUnsortedLinkeList();
-		LinkListNode head = null;
+		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
 		ll.printLinkList(head);

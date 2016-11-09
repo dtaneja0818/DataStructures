@@ -3,9 +3,9 @@ package LinkList;
 
 public class PrintMiddleOfLinkedList {
 
-	public int getMiddle(LinkListNode head){
-		LinkListNode slow = head;
-		LinkListNode fast = head;
+	public int getMiddle(ListNode head){
+		ListNode slow = head;
+		ListNode fast = head;
 		
 		if(head != null){
 			while(fast != null && fast.next != null){
@@ -19,7 +19,7 @@ public class PrintMiddleOfLinkedList {
 	
 	public static void main(String[] args) {
 		PrintMiddleOfLinkedList obj = new PrintMiddleOfLinkedList();
-		LinkListNode head = null;
+		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
 		ll.printLinkList(head);

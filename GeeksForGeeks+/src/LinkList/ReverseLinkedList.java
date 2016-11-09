@@ -4,10 +4,10 @@ package LinkList;
 public class ReverseLinkedList {
 
 	//Time Complexity: O(n), Space Complexity: O(1)
-	public LinkListNode reverseLL(LinkListNode head){
-		LinkListNode prev = null;
-		LinkListNode curr = head;
-		LinkListNode next = null;
+	public ListNode reverseLL(ListNode head){
+		ListNode prev = null;
+		ListNode curr = head;
+		ListNode next = null;
 		while(curr != null){
 			next = curr.next;
 			curr.next = prev;
@@ -24,10 +24,10 @@ public class ReverseLinkedList {
 	   4) Fix head pointer
 	*/
 	// not working as expected
-	public void reverseLLUsingRecursion(LinkListNode head){
+	public void reverseLLUsingRecursion(ListNode head){
 
-		LinkListNode first;
-		LinkListNode rest;
+		ListNode first;
+		ListNode rest;
 	      
 	    /* empty list */
 	    if (head == null)
@@ -54,7 +54,7 @@ public class ReverseLinkedList {
 	
 	public static void main(String[] args) {
 			ReverseLinkedList obj = new ReverseLinkedList();
-			LinkListNode head = null;
+			ListNode head = null;
 			LinkListOperations ll = new LinkListOperations();
 			head = ll.createLinkList();
 			ll.printLinkList(head);
