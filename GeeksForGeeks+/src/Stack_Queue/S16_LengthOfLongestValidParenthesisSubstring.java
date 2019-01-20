@@ -1,5 +1,5 @@
 package Stack_Queue;
-// http://www.geeksforgeeks.org/length-of-the-longest-valid-substring/
+// https://www.geeksforgeeks.org/length-of-the-longest-valid-substring/
 import java.util.*;
 public class S16_LengthOfLongestValidParenthesisSubstring {
 

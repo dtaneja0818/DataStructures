@@ -1,6 +1,6 @@
 package AdvancedDS;
 /*
- * http://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
+ * https://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
  */
 public class BoggleGame {
 

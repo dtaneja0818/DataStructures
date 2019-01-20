@@ -1,7 +1,7 @@
 package Stack_Queue;
 import java.util.Stack;
 
-// http://www.geeksforgeeks.org/queue-using-stacks/
+// https://www.geeksforgeeks.org/queue-using-stacks/
 
 public class Q6_ImplementQueueUsingStacks {
 

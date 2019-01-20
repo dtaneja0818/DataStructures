@@ -1,6 +1,19 @@
 package LinkList;
 import java.util.*;
-
+// createLinkList
+// createCLL
+// createFullCLL
+// addNodeAtBegining
+// addNodeAtEnd
+// addNodeAtNthPosition
+// deleteNodeAtNthPosition
+// deleteNodeFromEnd
+// deleteNodeFromBeginning
+// mergeLL
+// printLinkList
+// printCLL
+// printLinkListUsingRecursion
+// reverseLinkList
 public class LinkListOperations{
 
 	public static void main(String[] args){
