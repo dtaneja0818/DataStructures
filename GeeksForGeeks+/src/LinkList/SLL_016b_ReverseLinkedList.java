@@ -3,18 +3,8 @@ package LinkList;
  * In this program I have taken 3 pointers prev,current,next in order to reverse the 
  * link list
  */
-public class ReverseLinkList{
-    public static void main(String[] args){
-        ListNode head = null;
-        LinkListOperations ll = new LinkListOperations();
-        head = ll.createLinkList();
-        ll.printLinkList(head);
-        //head = reverseLinkListUsingIteration(head);
-        //ll.printLinkList(head);
-        head = reverseLinkListUsingRecursion(head);
-        ll.printLinkList(head);
-    }
-
+public class SLL_016b_ReverseLinkedList{
+   
     public static ListNode reverseLinkListUsingIteration(ListNode head){
         ListNode currentPtr, prevPtr, nextPtr;
         currentPtr = head;
@@ -43,5 +33,17 @@ public class ReverseLinkList{
         currentPtr.next = null;
         return ptr;
     }
+    
+    public static void main(String[] args){
+        ListNode head = null;
+        LinkListOperations ll = new LinkListOperations();
+        head = ll.createLinkList();
+        ll.printLinkList(head);
+        //head = reverseLinkListUsingIteration(head);
+        //ll.printLinkList(head);
+        head = reverseLinkListUsingRecursion(head);
+        ll.printLinkList(head);
+    }
+
 }
 

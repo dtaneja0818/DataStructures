@@ -2,7 +2,7 @@ package LinkList;
 /*
  * http://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/
  */
-public class SwapKthNodeFromBeginningWithKthNodeFromEnd {
+public class DLL_007_SwapKthNodeFromBeginningWithKthNodeFromEnd {
 
 	public ListNode swap(ListNode head, int k){
 		if(head == null) return head;
@@ -52,7 +52,7 @@ public class SwapKthNodeFromBeginningWithKthNodeFromEnd {
 	}
 	
 	public static void main(String[] args) {
-		SwapKthNodeFromBeginningWithKthNodeFromEnd obj = new SwapKthNodeFromBeginningWithKthNodeFromEnd();
+		DLL_007_SwapKthNodeFromBeginningWithKthNodeFromEnd obj = new DLL_007_SwapKthNodeFromBeginningWithKthNodeFromEnd();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();

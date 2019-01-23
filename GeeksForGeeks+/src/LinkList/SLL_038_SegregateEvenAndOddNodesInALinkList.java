@@ -2,7 +2,7 @@ package LinkList;
 /*
  * http://www.geeksforgeeks.org/segregate-even-and-odd-elements-in-a-linked-list/
  */
-public class SegregateEvenAndOddNodesInALinkList {
+public class SLL_038_SegregateEvenAndOddNodesInALinkList {
 
 	public ListNode segregate(ListNode head){
 		if(head == null) return null;
@@ -43,11 +43,13 @@ public class SegregateEvenAndOddNodesInALinkList {
 	}
 
 	public static void main(String[] args) {
-		SegregateEvenAndOddNodesInALinkList obj = new SegregateEvenAndOddNodesInALinkList();
+		SLL_038_SegregateEvenAndOddNodesInALinkList obj = new SLL_038_SegregateEvenAndOddNodesInALinkList();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();
+		System.out.println("Original List");
 		ll.printLinkList(head);
+		System.out.println("Segregated List");
 		head = obj.segregate(head);
 		ll.printLinkList(head);
 	}

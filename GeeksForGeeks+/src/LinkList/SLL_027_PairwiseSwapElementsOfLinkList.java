@@ -3,8 +3,7 @@ package LinkList;
  * http://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
  * http://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list-by-changing-links/
  */
- 
-public class PairwiseSwapElementsOfLinkList {
+public class SLL_027_PairwiseSwapElementsOfLinkList {
 
 	public ListNode pairwiseSwap(ListNode head){
 		if(head == null || head.next == null) return head;
@@ -46,7 +45,7 @@ public class PairwiseSwapElementsOfLinkList {
 		return head;
 	}
 	public static void main(String[] args) {
-		PairwiseSwapElementsOfLinkList obj = new PairwiseSwapElementsOfLinkList();
+		SLL_027_PairwiseSwapElementsOfLinkList obj = new SLL_027_PairwiseSwapElementsOfLinkList();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();

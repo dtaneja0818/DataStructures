@@ -1,9 +1,8 @@
 package LinkList;
-
 /*
  * http://www.geeksforgeeks.org/sort-a-linked-list-of-0s-1s-or-2s/
  */
-public class SortLinkListOf0s1sAnd2s {
+public class SLL_047_SortLinkListOf0s1sAnd2s {
 	
 	public ListNode sort(ListNode head){
 		if(head == null || head.next == null) return head;
@@ -27,7 +26,7 @@ public class SortLinkListOf0s1sAnd2s {
 	}
 	
 	public static void main(String[] args) {
-		SortLinkListOf0s1sAnd2s obj = new SortLinkListOf0s1sAnd2s();
+		SLL_047_SortLinkListOf0s1sAnd2s obj = new SLL_047_SortLinkListOf0s1sAnd2s();
 		ListNode head = null;
         LinkListOperations ll = new LinkListOperations();
         head = ll.createLinkList();

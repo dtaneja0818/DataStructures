@@ -4,7 +4,7 @@ package LinkList;
  * http://www.geeksforgeeks.org/split-a-circular-linked-list-into-two-halves/
  */
  
-public class SplitCLLintoTwoHalves {
+public class CLL_003_SplitCLLintoTwoHalves {
 
 	public ListNode[] split(ListNode a){
 		ListNode[] result = {null,null};
@@ -38,7 +38,7 @@ public class SplitCLLintoTwoHalves {
 	}
 
 	public static void main(String[] args) {
-		SplitCLLintoTwoHalves obj = new SplitCLLintoTwoHalves();
+		CLL_003_SplitCLLintoTwoHalves obj = new CLL_003_SplitCLLintoTwoHalves();
 		ListNode[] result = {null,null};
         LinkListOperations ll = new LinkListOperations();
         ListNode head = null;

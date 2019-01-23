@@ -1,9 +1,10 @@
-//http://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+ /* http://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+ * http://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
+ */
 package LinkList;
-
 import java.util.Hashtable;
 
-public class RemoveDuplicatesFromSortedAndUnsortedLinkeList {
+public class SLL_026_RemoveDuplicatesFromSortedAndUnsortedLinkeList {
 
 	//Time Complexity: O(n) where n is number of nodes in the given linked list
 	public ListNode removeDuplicatesFromSortedLL(ListNode head){
@@ -47,7 +48,7 @@ public class RemoveDuplicatesFromSortedAndUnsortedLinkeList {
 	}
 		
 	public static void main(String[] args) {
-		RemoveDuplicatesFromSortedAndUnsortedLinkeList obj = new RemoveDuplicatesFromSortedAndUnsortedLinkeList();
+		SLL_026_RemoveDuplicatesFromSortedAndUnsortedLinkeList obj = new SLL_026_RemoveDuplicatesFromSortedAndUnsortedLinkeList();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();

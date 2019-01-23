@@ -1,10 +1,8 @@
 package LinkList;
-
 /*
  * http://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
- * http://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
  */
-public class RemoveDuplicatesFromSortedLinkList {
+public class SLL_025_RemoveDuplicatesFromSortedLinkList {
 
 	public ListNode removeDup(ListNode head){
 		if(head == null || head.next == null) return head;
@@ -35,7 +33,7 @@ public class RemoveDuplicatesFromSortedLinkList {
 	}
 
 	public static void main(String[] args) {
-		RemoveDuplicatesFromSortedLinkList obj = new RemoveDuplicatesFromSortedLinkList();
+		SLL_025_RemoveDuplicatesFromSortedLinkList obj = new SLL_025_RemoveDuplicatesFromSortedLinkList();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();

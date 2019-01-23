@@ -1,7 +1,7 @@
 //http://www.geeksforgeeks.org/write-a-function-to-reverse-the-nodes-of-a-linked-list/
 package LinkList;
 
-public class ReverseLinkedList {
+public class SLL_016a_ReverseLinkedList {
 
 	//Time Complexity: O(n), Space Complexity: O(1)
 	public ListNode reverseLL(ListNode head){
@@ -53,7 +53,7 @@ public class ReverseLinkedList {
 	}
 	
 	public static void main(String[] args) {
-			ReverseLinkedList obj = new ReverseLinkedList();
+			SLL_016a_ReverseLinkedList obj = new SLL_016a_ReverseLinkedList();
 			ListNode head = null;
 			LinkListOperations ll = new LinkListOperations();
 			head = ll.createLinkList();

@@ -2,7 +2,7 @@ package LinkList;
 /*
  * http://www.geeksforgeeks.org/reverse-a-list-in-groups-of-given-size/
  */
-public class ReverseLinkListInGroupsOfSizeK{
+public class SLL_035_ReverseLinkListInGroupsOfSizeK{
 
 	public ListNode reverseInGroups(ListNode head, int k){
 		if(head == null) return head;
@@ -55,7 +55,7 @@ public class ReverseLinkListInGroupsOfSizeK{
 	}
 	
 	public static void main(String[] args) {
-		ReverseLinkListInGroupsOfSizeK obj = new ReverseLinkListInGroupsOfSizeK();
+		SLL_035_ReverseLinkListInGroupsOfSizeK obj = new SLL_035_ReverseLinkListInGroupsOfSizeK();
 		ListNode head = null;
 		LinkListOperations ll = new LinkListOperations();
 		head = ll.createLinkList();

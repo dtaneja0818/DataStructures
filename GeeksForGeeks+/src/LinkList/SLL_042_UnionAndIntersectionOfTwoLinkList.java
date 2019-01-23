@@ -3,7 +3,7 @@ package LinkList;
  * http://www.geeksforgeeks.org/union-and-intersection-of-two-linked-lists/
  * TODO: Intersection and union using hashmap
  */
-public class UnionAndIntersectionOfTwoLinkList {
+public class SLL_042_UnionAndIntersectionOfTwoLinkList {
 
 	// Time Complexity: O(mn)
 	public ListNode union(ListNode a, ListNode b){
@@ -51,7 +51,7 @@ public class UnionAndIntersectionOfTwoLinkList {
 	}
 	
 	public static void main(String[] args) {
-		UnionAndIntersectionOfTwoLinkList obj = new UnionAndIntersectionOfTwoLinkList();
+		SLL_042_UnionAndIntersectionOfTwoLinkList obj = new SLL_042_UnionAndIntersectionOfTwoLinkList();
 		ListNode head1 = null;
 		ListNode head2 = null;
 		ListNode head = null;

@@ -2,7 +2,7 @@ package LinkList;
 /*
  * http://www.geeksforgeeks.org/rotate-a-linked-list/
  */
-public class RotateALinkList {
+public class SLL_044_RotateALinkList {
 
 	public ListNode rotate(ListNode head, int k){
 		if(head == null || head.next == null || k == 0) return head;
@@ -28,7 +28,7 @@ public class RotateALinkList {
 	
 	
 	public static void main(String[] args) {
-		RotateALinkList obj = new RotateALinkList();
+		SLL_044_RotateALinkList obj = new SLL_044_RotateALinkList();
 		ListNode head = null;
         LinkListOperations ll = new LinkListOperations();
         head = ll.createLinkList();
