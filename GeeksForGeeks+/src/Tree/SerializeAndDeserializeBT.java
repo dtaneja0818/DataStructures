@@ -51,7 +51,7 @@ public class SerializeAndDeserializeBT {
 		//System.out.println("deserialize");
 		root2 = deserialize(root2, in);
 		//root2.print(root2);
-		BT15_DetermineIfTwoTreesAreIdentical obj = new BT15_DetermineIfTwoTreesAreIdentical();
+		BT_015_DetermineIfTwoTreesAreIdentical obj = new BT_015_DetermineIfTwoTreesAreIdentical();
 		System.out.println("identical:"+obj.isIdentical(root,root2));
 	}
 }

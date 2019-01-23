@@ -1,9 +1,7 @@
 package Array_Matrix;
-import java.util.Arrays;
-import java.util.Hashtable;
+import java.util.*;
 /*
  * http://www.geeksforgeeks.org/write-a-c-program-that-given-a-set-a-of-n-numbers-and-another-number-x-determines-whether-or-not-there-exist-two-elements-in-s-whose-sum-is-exactly-x/
- *	
  */
 public class A001_CheckForPairInArrayWithSumx {
 
@@ -29,17 +27,18 @@ public class A001_CheckForPairInArrayWithSumx {
 		}
 		return false;
 	}
-	// This method works in O(n) time.
-	public boolean isSumApproach2(int[] arr, int x){
-		Hashtable<Integer,Boolean> hash = new Hashtable<Integer,Boolean>();
+	// This method works in O(n) time. O(n) space
+	public boolean isSumApproach2(int[] nums, int target){
+		Map<Integer,Integer> hash = new HashMap<Integer,Integer>();
 		int diff = 0;
 		int i = 0;
-		while(i < arr.length){
-			diff = Math.abs(arr[i]-x);
-			if(hash.containsKey(arr[i])){
+		while(i < nums.length){
+			diff = target - nums[i];
+			if(hash.containsKey(nums[i])){
 				return true;
+                //return new int[] { hash.get(nums[i]), i};
 			}else{
-				hash.put(diff,true);
+				hash.put(diff, i);
 			}
 			i++;
 		}
