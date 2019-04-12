@@ -46,7 +46,7 @@ public class A001_CheckForPairInArrayWithSumx {
 	}
 
 	public static void main(String[] args) {
-		//test upload
+		//test upload 2
 		A001_CheckForPairInArrayWithSumx obj = new A001_CheckForPairInArrayWithSumx();
 		int[] arr = {1, 4, 45, 5, 10, 8};
 		System.out.println("sum exists:"+obj.isSumApproach2(arr,5));
