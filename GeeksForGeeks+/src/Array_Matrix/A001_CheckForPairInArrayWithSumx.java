@@ -12,7 +12,7 @@ public class A001_CheckForPairInArrayWithSumx {
 		int sum = 0;
 		int start = 0;
 		int end = arr.length-1;
-
+		
 		while(start < end){
 			sum = arr[start] + arr[end];
 			if(sum == x){
@@ -27,6 +27,7 @@ public class A001_CheckForPairInArrayWithSumx {
 		}
 		return false;
 	}
+	
 	// This method works in O(n) time. O(n) space
 	public boolean isSumApproach2(int[] nums, int target){
 		Map<Integer,Integer> hash = new HashMap<Integer,Integer>();
@@ -44,9 +45,8 @@ public class A001_CheckForPairInArrayWithSumx {
 		}
 		return false;
 	}
-
+	
 	public static void main(String[] args) {
-		//test upload 2
 		A001_CheckForPairInArrayWithSumx obj = new A001_CheckForPairInArrayWithSumx();
 		int[] arr = {1, 4, 45, 5, 10, 8};
 		System.out.println("sum exists:"+obj.isSumApproach2(arr,5));
